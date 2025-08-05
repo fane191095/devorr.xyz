@@ -3,28 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devorr - Romania's #1 Advanced Discord Security Bot</title>
+    <title>Devorr - #1 Discord Security Bot</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <!-- Lightning Background -->
-    <div class="lightning-container">
-        <div class="lightning lightning-1"></div>
-        <div class="lightning lightning-2"></div>
-        <div class="lightning lightning-3"></div>
+    <!-- Animated Background Elements -->
+    <div class="bg-elements">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Particle System -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Sticky Add to Discord Button -->
+    <div class="sticky-invite">
+        <a href="https://discord.com/api/oauth2/authorize?client_id=1386493566183936131&permissions=8&scope=bot" class="sticky-btn" target="_blank">➕ Add to Discord</a>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Devorr</h1>
-                <p class="hero-subtitle">Romania's #1 Advanced Discord Security Bot</p>
-                <a href="https://discord.com/api/oauth2/authorize?client_id=1386493566183936131&permissions=8&scope=bot" class="cta-button" target="_blank">
-                    <span>Invite to Discord</span>
-                    <div class="button-glow"></div>
-                </a>
+                <div class="hero-badge">🏆 #1 Discord Security Bot From Romania</div>
+                <h1 class="hero-title" data-text="DEVORR">DEVORR</h1>
+                <p class="hero-subtitle">Ultimate Discord Server Protection & Security</p>
+                <p class="hero-description">Advanced anti-nuke protection, real-time monitoring, and comprehensive security features for your Discord community.</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/api/oauth2/authorize?client_id=1386493566183936131&permissions=8&scope=bot" class="cta-button primary" target="_blank">
+                        <span>⚡ Invite Bot</span>
+                        <div class="button-glow"></div>
+                    </a>
+                    <a href="https://discord.gg/devorr" class="cta-button secondary" target="_blank">
+                        <span>📨 Join Support Server</span>
+                        <div class="button-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Trusted by Thousands</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🛡️</div>
+                    <div class="stat-number" data-target="2500">173</div>
+                    <div class="stat-label">Protected Servers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number" data-target="50000">865</div>
+                    <div class="stat-label">Threats Blocked</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" data-target="99.9">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="100000">5.9k</div>
+                    <div class="stat-label">Users Protected</div>
+                </div>
             </div>
         </div>
     </section>
@@ -32,42 +80,182 @@
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Security Commands</h2>
+            <h2 class="section-title">Powerful Security Features</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <h3>$antinuke</h3>
-                    <p>Enable anti-nuke protection</p>
+                    <div class="feature-name">Anti-Nuke Protection</div>
+                    <div class="feature-description">Advanced protection against server destruction attacks. Automatically detects and blocks malicious activities before they can cause damage.</div>
+                    <div class="feature-usage">/antinuke enable</div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>$antinukev2</h3>
-                    <p>Activate beta smart protection</p>
+                    <div class="feature-icon">🔒</div>
+                    <div class="feature-name">Server Lockdown</div>
+                    <div class="feature-description">Instantly lock all channels and restrict access during emergencies to protect your server from ongoing threats.</div>
+                    <div class="feature-usage">/lockdown activate</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚠️</div>
+                    <div class="feature-name">Panic Mode</div>
+                    <div class="feature-description">Emergency response system that stops all suspicious activities and immediately alerts administrators.</div>
+                    <div class="feature-usage">/panic emergency</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚙️</div>
-                    <h3>$setup</h3>
-                    <p>Easy setup guide</p>
+                    <div class="feature-name">Quick Setup</div>
+                    <div class="feature-description">One-click security configuration with optimized settings tailored for maximum protection and performance.</div>
+                    <div class="feature-usage">/setup security</div>
                 </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <div class="feature-name">Real-time Monitoring</div>
+                    <div class="feature-description">24/7 surveillance of your server with intelligent threat detection and instant response capabilities.</div>
+                    <div class="feature-usage">/monitor status</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-name">Security Analytics</div>
+                    <div class="feature-description">Comprehensive security reports and analytics to help you understand and improve your server's protection.</div>
+                    <div class="feature-usage">/analytics view</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Devorr?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Lightning Fast Response</h3>
+                    <p>Instant threat detection and response in under 100ms. Your server is protected before damage can occur.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>24/7 Monitoring</h3>
+                    <p>Continuous surveillance with AI-powered threat detection that never sleeps, ensuring constant protection.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Universal Compatibility</h3>
+                    <p>Works seamlessly with all Discord bots and integrations without conflicts or performance issues.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Zero False Positives</h3>
+                    <p>Advanced algorithms ensure legitimate activities are never blocked while catching real threats.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Scalable Protection</h3>
+                    <p>From small communities to massive servers, Devorr scales to protect any size Discord server.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛠️</div>
+                    <h3>Easy Configuration</h3>
+                    <p>Set up comprehensive security in minutes with our intuitive commands and smart defaults.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Support Section -->
-    <section class="support">
-        <div class="container">
-            <h2 class="section-title">Need Help?</h2>
-            <p class="support-text">Join our support server for assistance and updates</p>
-            <a href="https://discord.gg/devorr" class="support-button" target="_blank">
-                <span>Join Support Server</span>
-                <div class="button-glow"></div>
-            </a>
-        </div>
-    </section>
+    <!-- Testimonials Section -->
+    <section class="partnerships">
+            <div class="container">
+                <h2 class="section-title">Our Partnerships</h2>
+                <div class="partnerships-list">
+                    <div class="partnership-item">
+                        <div class="server-info">
+                            <div class="server-name">Elite Gaming Hub</div>
+                            <a href="https://discord.gg/elitegaming" class="discord-link" target="_blank">
+                                <span class="discord-icon">💬</span>
+                                discord.gg/elitegaming
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partnership-item">
+                        <div class="server-info">
+                            <div class="server-name">Tech Innovators</div>
+                            <a href="https://discord.gg/techinnovators" class="discord-link" target="_blank">
+                                <span class="discord-icon">💬</span>
+                                discord.gg/techinnovators
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partnership-item">
+                        <div class="server-info">
+                            <div class="server-name">Creative Minds Network</div>
+                            <a href="https://discord.gg/creativeminds" class="discord-link" target="_blank">
+                                <span class="discord-icon">💬</span>
+                                discord.gg/creativeminds
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partnership-item">
+                        <div class="server-info">
+                            <div class="server-name">Study & Learn Together</div>
+                            <a href="https://discord.gg/studylearn" class="discord-link" target="_blank">
+                                <span class="discord-icon">💬</span>
+                                discord.gg/studylearn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partnership-item">
+                        <div class="server-info">
+                            <div class="server-name">Developer Community</div>
+                            <a href="https://discord.gg/developers" class="discord-link" target="_blank">
+                                <span class="discord-icon">💬</span>
+                                discord.gg/developers
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partnership-item">
+                        <div class="server-info">
+                            <div class="server-name">Music & Arts Collective</div>
+                            <a href="https://discord.gg/musicarts" class="discord-link" target="_blank">
+                                <span class="discord-icon">💬</span>
+                                discord.gg/musicarts
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Devorr Protection</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>DEVORR</h3>
+                    <p>Ultimate Discord Security Protection</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <a href="https://discord.com/api/oauth2/authorize?client_id=1386493566183936131&permissions=8&scope=bot" target="_blank">Invite Bot</a>
+                        <a href="https://discord.gg/devorr" target="_blank">Support Server</a>
+                        <a href="#" target="_blank">Documentation</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Features</h4>
+                        <a href="#">Anti-Nuke</a>
+                        <a href="#">Server Lockdown</a>
+                        <a href="#">Real-time Monitoring</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <a href="https://discord.gg/devorr" target="_blank">Discord</a>
+                        <a href="#" target="_blank">Status Page</a>
+                        <a href="#" target="_blank">Changelog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Devorr. All rights reserved. | Made with ⚡ by the Devorr Team</p>
+            </div>
         </div>
     </footer>
 
